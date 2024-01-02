@@ -1,17 +1,11 @@
-let zak = 'Zak Ruvalcaba'
-let sally = 'Sally Smith'
-let holly = 'Holly Unlikely'
-let amol = 'Amol Shookup'
-let robin = 'Robin Banks'
-let aaron = 'Aaron Tyres'
-const element = (
-    <ul style={{'color': 'blue', 'fontSize': '24px'}}>
-        <li>{zak}</li>
-        <li>{sally}</li>
-        <li>{holly}</li>
-        <li>{amol}</li>
-        <li>{robin}</li>
-        <li>{aaron}</li>
-    </ul>
+import React from 'react'
+// import ReactDOM from 'react-dom'
+import {createRoot} from 'react-dom/client'
+import EmployeeList from './EmployeeList.jsx'
+
+const root = createRoot(document.getElementById('content'))
+root.render(
+  <React.StrictMode>
+    <EmployeeList />
+  </React.StrictMode>,
 )
-ReactDOM.render(element,document.getElementById('content')) 

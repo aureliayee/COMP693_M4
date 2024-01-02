@@ -4,9 +4,9 @@
   "description": "Module 01",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon app.js",
-    "compile": "babel src --presets @babel/react --out-dir public",
-    "watch": "babel src --presets @babel/react --out-dir public --watch --verbose"
+    "start": "nodemon app.js",
+    "compile": "webpack",
+    "watch": "webpack --watch"
   },
   "keywords": [],
   "author": "",
@@ -15,14 +15,21 @@
   "devDependencies": {
     "@babel/cli": "^7.23.4",
     "@babel/core": "^7.23.7",
+    "@babel/preset-env": "^7.23.7",
     "@babel/preset-react": "^7.23.3",
-    "nodemon": "^3.0.2"
+    "babel-loader": "^9.1.3",
+    "nodemon": "^3.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
   },
   "dependencies": {
     "ansi-styles": "^3.2.1",
     "anymatch": "^3.1.3",
     "balanced-match": "^1.0.2",
     "binary-extensions": "^2.2.0",
+    "body-parser": "^1.20.2",
     "brace-expansion": "^1.1.11",
     "braces": "^3.0.2",
     "browserslist": "^4.22.2",
@@ -35,6 +42,7 @@
     "concat-map": "^0.0.1",
     "convert-source-map": "^2.0.0",
     "debug": "^4.3.4",
+    "dotenv": "^16.3.1",
     "electron-to-chromium": "^1.4.616",
     "escalade": "^3.1.1",
     "escape-string-regexp": "^1.0.5",
@@ -60,6 +68,7 @@
     "lru-cache": "^5.1.1",
     "make-dir": "^2.1.0",
     "minimatch": "^3.1.2",
+    "mongoose": "^8.0.3",
     "ms": "^2.1.2",
     "node-releases": "^2.0.14",
     "normalize-path": "^3.0.0",
